@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.templetebbg.databinding.ListItemBinding
 import com.example.templetebbg.domain.Entity
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
+class ListAdapter : RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
     var onItemClick: ((Entity) -> Unit)? = null
 
     private val differCallback = object : DiffUtil.ItemCallback<Entity>(){
