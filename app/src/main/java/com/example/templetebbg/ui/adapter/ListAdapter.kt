@@ -23,7 +23,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
 
     val differ = AsyncListDiffer(this, differCallback)
 
-    inner class MovieViewHolder(val binding: ListItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class MovieViewHolder(val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.root.setOnClickListener {
                 onItemClick?.invoke(differ.currentList[adapterPosition])
