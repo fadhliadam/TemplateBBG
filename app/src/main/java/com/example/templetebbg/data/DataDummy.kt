@@ -6,7 +6,7 @@ import com.example.templetebbg.data.dataclass.Item
 
 object DataDummy {
 
-    fun generateDummyListItem() : LiveData<List<Item>> {
+    fun generateDummyListItem(): LiveData<List<Item>> {
         val list: MutableList<Item> = arrayListOf()
         val result = MutableLiveData<List<Item>>()
         for (i in 0..10){
