@@ -1,3 +1,7 @@
 package com.example.templetebbg.domain
 
-class Entity()
+data class Entity(
+    val id: Int,
+    val title: String,
+    val body: String,
+)
