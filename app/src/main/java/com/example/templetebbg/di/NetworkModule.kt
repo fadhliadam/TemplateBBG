@@ -30,7 +30,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(client: OkHttpClient):ApiService{
+    fun provideRetrofit(client: OkHttpClient): ApiService{
         return Retrofit.Builder()
             .baseUrl("BASE_URL")
             .addConverterFactory(GsonConverterFactory.create())
