@@ -12,13 +12,11 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
     var onItemClick: ((Entity) -> Unit)? = null
 
     private val differCallback = object : DiffUtil.ItemCallback<Entity>() {
-        override fun areItemsTheSame(oldItem: Entity, newItem: Entity): Boolean {
-            return oldItem.id == newItem.id
-        }
+        override fun areItemsTheSame(oldItem: Entity, newItem: Entity): Boolean =
+            oldItem.id == newItem.id
 
-        override fun areContentsTheSame(oldItem: Entity, newItem: Entity): Boolean {
-            return oldItem == newItem
-        }
+        override fun areContentsTheSame(oldItem: Entity, newItem: Entity): Boolean =
+            oldItem == newItem
     }
 
     val differ = AsyncListDiffer(this, differCallback)
