@@ -11,7 +11,7 @@ import com.example.templetebbg.domain.Entity
 class ListAdapter : RecyclerView.Adapter<ListAdapter.MovieViewHolder>() {
     var onItemClick: ((Entity) -> Unit)? = null
 
-    private val differCallback = object : DiffUtil.ItemCallback<Entity>(){
+    private val differCallback = object : DiffUtil.ItemCallback<Entity>() {
         override fun areItemsTheSame(oldItem: Entity, newItem: Entity): Boolean {
             return oldItem.id == newItem.id
         }
